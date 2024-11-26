@@ -115,11 +115,11 @@ npm run dev
 Here are the available API endpoints:
 
 - **User Management**:
-  - `POST /create` - Create a user (Admin access required).
-  - `GET /getall` - Get a list of all users (Admin access required).
+  - `POST /create` - Create a user.
+  - `GET /getall` - Get a list of all users.
   - `GET /getone/:id` - Get details of a specific user by their ID.
-  - `PUT /update/:id` - Update a user's details by their ID (Admin access required).
-  - `DELETE /delete/:id` - Delete a user by their ID (Admin access required).
+  - `PUT /update/:id` - Update a user's details by their ID.
+  - `DELETE /delete/:id` - Delete a user by their ID.
 
 ---
 
