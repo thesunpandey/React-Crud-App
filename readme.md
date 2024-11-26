@@ -1,4 +1,3 @@
-Here's the updated `README.md` reflecting your defined routes:
 
 ---
 
