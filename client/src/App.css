@@ -1,0 +1,209 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+:root {
+    /* Color Palette */
+    --background-primary: #f0f4f8;
+    --background-secondary: #ffffff;
+    --text-primary: #1a2b3c;
+    --text-secondary: #4a5568;
+    --accent-color: #3182ce;
+    --accent-light: #4299e1;
+    --border-color: #e2e8f0;
+    
+    /* Typography */
+    --font-primary: 'Inter', sans-serif;
+    --font-secondary: 'Roboto', sans-serif;
+    
+    /* Spacing */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    
+    /* Transitions */
+    --transition-speed: 0.3s;
+    
+    /* Border Radius */
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 12px;
+}
+
+/* CSS Reset and Normalization */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--background-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-weight: 400;
+    min-height: 100vh;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-secondary);
+    font-weight: 600;
+    margin-bottom: var(--space-sm);
+    color: var(--text-primary);
+}
+
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.75rem; }
+h4 { font-size: 1.5rem; }
+h5 { font-size: 1.25rem; }
+h6 { font-size: 1rem; }
+
+p {
+    margin-bottom: var(--space-sm);
+    color: var(--text-secondary);
+}
+
+a {
+    color: var(--accent-color);
+    text-decoration: none;
+    transition: color var(--transition-speed) ease;
+}
+
+a:hover {
+    color: var(--accent-light);
+    text-decoration: underline;
+}
+
+/* Form Elements */
+input, 
+button, 
+select, 
+textarea {
+    font-family: var(--font-primary);
+    transition: all var(--transition-speed) ease;
+}
+
+input, 
+textarea, 
+select {
+    width: 100%;
+    padding: var(--space-sm);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    border-color: var(--accent-color);
+    box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    border-radius: var(--radius-sm);
+    padding: var(--space-sm) var(--space-md);
+    background-color: var(--accent-color);
+    color: white;
+    font-weight: 500;
+    transition: 
+        background-color var(--transition-speed) ease,
+        transform var(--transition-speed) ease;
+}
+
+button:hover {
+    background-color: var(--accent-light);
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(0);
+}
+
+/* Utility Classes */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+}
+
+.flex {
+    display: flex;
+    gap: var(--space-sm);
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-sm);
+}
+
+.grid {
+    display: grid;
+    gap: var(--space-sm);
+}
+
+/* Responsive Typography */
+@media screen and (max-width: 768px) {
+    body {
+        font-size: 90%;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+    h5 { font-size: 1.1rem; }
+    h6 { font-size: 1rem; }
+}
+
+/* Dark Mode (Optional) */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background-primary: #121212;
+        --background-secondary: #1e1e1e;
+        --text-primary: #e0e0e0;
+        --text-secondary: #a0a0a0;
+        --accent-color: #4299e1;
+        --border-color: #333;
+    }
+
+    body {
+        background-color: var(--background-primary);
+        color: var(--text-primary);
+    }
+}
+
+/* Scrollbar Styling (Optional) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--background-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--accent-color);
+    border-radius: var(--radius-md);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--accent-light);
+}
